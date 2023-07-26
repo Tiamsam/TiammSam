@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>imageGPT-BOT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(to bottom, #FF8C3B, #00B9D8);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #FFFFFF; /* 设置整个页面的文字颜色为白色 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 64px; /* 放大标题 */
+            color: #FFFFFF;
+            font-weight: bold;
+            margin-top: 70px; /* 将标题稍微上移 */
+        }
+
+        form {
+            margin-top: 15px; /* 将表单上移一点点 */
+        }
+
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            font-size: 18px;
+            border: 1px solid #00B9D8;
+            border-radius: 5px;
+            outline: none;
+            background-color: #2E3036;
+            color: #FFFFFF; /* 输入框内文字颜色设置为白色 */
+        }
+
+        input[type="submit"] {
+            background-color: #00B9D8;
+            color: #FFFFFF; /* 按钮文字颜色设置为白色 */
+            border: none;
+            padding: 10px 20px;
+            font-size: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0090AD;
+        }
+
+        p {
+            font-size: 20px;
+            margin-top: 5px; /* 将文字上移一点点 */
+        }
+
+        .reply {
+            font-size: 20px;
+            color: #FFFFFF; /* reply那一行字体颜色改为白色 */
+            margin-top: 5px; /* 略微上移 */
+            display: inline-block; /* 保持在同一行 */
+        }
+
+        .reply-content {
+            font-size: 18px; /* reply的内容缩小 */
+            color: #FFFFFF; /* reply的内容字体颜色改为白色 */
+        }
+    </style>
+</head>
+<body>
+    <h1>imageGPT-BOT</h1>
+    <form action="/" method="post">
+        <p>Please describe the picture you want:</p>
+        <p><input type="text" name="question"></p>
+        <p><input type="submit" value="Enter"></p>
+    </form>
+    <p class="reply">Reply: <span class="reply-content">{{ result }}</span></p>
+    <p><img src={{ result }}></p>
+</body>
+</html>
 
